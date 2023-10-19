@@ -1,0 +1,415 @@
+package demo1;
+
+class first
+{
+	private int num=200;
+ public first()	
+ {
+  	 System.out.println("deafalut first");
+ }
+ void setfirst(int num)
+ {
+	 this.num=num;
+ }
+ 
+ int getfirst()
+ {
+	 return getfirst();
+ }
+}
+class second extends first
+{
+	String ch;
+	public second()
+	{
+		System.out.println(" default second ");
+	}
+	void setsecond(String ch)
+	{
+		this.ch=ch;
+	}
+	
+	String getsecond()
+	{
+		return getsecond();
+	}
+}
+	public class Demo1
+	{
+	public static void main(String[] args)
+	{
+		first f=new first();
+		second s=new second();
+		f.getfirst();
+		
+		
+		
+		
+	}
+}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2.
+
+package demo1;
+
+class A
+{
+	static int num=10;
+	int num1;
+	
+	A()
+	{
+		System.out.println("Default consrtuctor");
+	}
+	
+	void setname(int num1)
+	{
+		this.num1=num1;
+	}
+	
+	int getname()
+	{
+		return num1;
+	}
+	static int getname1()
+	{
+		return num;
+	}
+}
+
+public class Demo1
+{
+	public static void main(String[] args)
+	{
+		System.out.println(A.getname1());
+		A ref=new A();
+		ref.setname(11);
+		System.out.println(ref.getname());
+		
+		
+	}
+}
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+Q3.
+
+package demo1;
+
+class Check
+{
+	int num=1;
+	public int ch=3;
+	protected int num1=6;
+	public String a="shrunkhala";
+	
+	public void disp()
+	{
+		System.out.println("check disp");
+		System.out.println(num);
+		System.out.println(ch);
+		System.out.println(a);
+		System.out.println(num1);
+		
+	}	
+	
+	
+}
+
+public class checkdemo
+{
+	public static void main(String[] args)
+	{
+		Check c=new Check();
+		//c.disp();
+		System.out.println(c.num1);
+		System.out.println(c.a);
+		
+		
+	}
+}
+
+
+----------------------------------------------------------------------------
+
+
+Q4.
+
+
+package demo1;
+
+
+class parents
+{
+	
+	parents(int num)
+	{
+		System.out.println("Parents class parameterizes");
+	}
+}
+
+class child extends parents
+{
+	child()
+	{
+		super(10);
+		System.out.println("child class constructor");
+	}
+	child(int num)
+	{
+		super(11);
+		System.out.println("child class parametrizd");
+	}
+}
+
+public class level
+{
+	public static void main(String [] args)
+	{
+		parents ref=new child(11);
+	}
+}
+
+
+
+----------------------------------------------------------------------------
+
+Q5.
+
+
+package demo1;
+
+
+class parents
+{
+	
+	parents(int num)
+	{
+		System.out.println("Parents class parameterizes");
+	}
+}
+
+class child extends parents
+{
+	
+	child(int num)
+	{
+		super(12);
+		System.out.println("child class parametrizd");
+	}
+}
+class child1 extends child
+{
+	child1()
+	{
+		super(2);
+		System.out.println("child1 class default");
+	}
+	
+	child1(int num)
+	{
+		super(3);
+		System.out.println("child1 class parameter");
+	}
+}
+
+public class level
+{
+	public static void main(String [] args)
+	{
+		parents ref=new child1();
+	}
+}
+
+
+--------------------------------------------------------------------------------------------
+
+Q6.
+
+
+package demo1;
+
+
+class parents
+{
+	
+	parents(int num)
+	{
+		System.out.println("Parents parameterizes");
+	}
+}
+
+class child1 extends parents
+{
+	child1()
+	{
+		super(1);
+		System.out.println("child1 constructor");
+	}
+	child1(int num)
+	{
+		super(2);
+		System.out.println("child1 parameter");
+	}
+}
+
+class child2 extends parents
+{
+	
+	child2()
+	{ 
+		super(1);
+		System.out.println("child2 constructor");
+		
+	}
+	child2(int num)
+	{
+		super(2);
+		System.out.println("child2parameter");
+	}
+}
+
+public class level
+{
+	public static void main(String [] args)
+	{
+		parents ref=new child2();
+	}
+}
+
+
+
+------------------------------------------------------------------------------------------------------
+
+Q7.
+
+package demo1;
+
+class parents
+{
+	void disp()
+	{
+		System.out.println("pareents disp");
+	}
+}
+
+class child extends parents
+{
+	void disp()
+	{
+		System.out.println("child disp");
+	}
+}
+
+public class level
+{
+	public static void main(String[] args)
+	{
+		child p=new child();
+		p.disp();
+	}
+	
+	
+}
+
+----------------------------------------------------------------------------------------------------
+
+Q8.
+
+
+package demo1;
+
+class parents
+{
+	void disp(int k)
+	{
+		System.out.println("display1");
+	}
+}
+class child
+{
+	void disp()
+	{
+		System.out.println("display2");
+	}
+}
+
+public class level
+{
+	public static void main(String[] args)
+	{
+		child w=new child();
+		w.disp();
+	}
+}
+
+
+----------------------------------------------------------------------------------------------------
+
+Q9.
+
+
+package demo1;
+
+
+class Shape
+{
+	void draw() 
+	{
+		
+	}
+}
+class circle extends Shape
+{
+	void draw()
+	{
+		System.out.println("Shape of circle");
+	}
+}
+class Rectangle extends Shape
+{
+	void draw()
+	{
+		System.out.println("Shape of rectangle");
+	}
+}
+class Polygon extends Shape
+{
+	void draw()
+	{
+		System.out.println("Shape of Polygon");
+	}
+
+}
+
+
+public class level
+{
+	static void perform(Shape ref)
+	{
+		ref.draw();
+	}
+	public static void main(String[] args)
+	{
+		perform(new Polygon());
+	}
+}
+
+
+---------------------------------------------------------------------------------------------------------------
+
+
+
+Q10.
+
+
+
+
+
+
